@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahul Pandikkad - Portfolio</title>
+  <style>
+    /* ====== Reset ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #111;
+      color: #eee;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ====== Navigation ====== */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #00ffff;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav ul li:hover {
+      color: #00ffff;
+    }
+
+    /* ====== Sections ====== */
+    section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.5s ease-in-out;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ====== About ====== */
+    #about {
+      background: linear-gradient(135deg, #1f1f1f, #111);
+    }
+
+    #about h1 {
+      font-size: 3rem;
+      color: #00ffff;
+      margin-bottom: 1rem;
+    }
+
+    #about p {
+      max-width: 700px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    /* ====== Portfolio ====== */
+    #portfolio {
+      background: #222;
+      padding: 3rem 2rem;
+    }
+
+    #portfolio h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: #333;
+      padding: 1rem;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,255,255,0.3);
+    }
+
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #00ffff;
+    }
+
+    /* ====== Gallery ====== */
+    #gallery {
+      background: #1a1a1a;
+      padding: 3rem 2rem;
+    }
+
+    #gallery h2 {
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 10px 20px rgba(0,255,255,0.3);
+    }
+
+    /* ====== Contact ====== */
+    #contact {
+      background: linear-gradient(135deg, #111, #1f1f1f);
+      padding: 3rem 2rem;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #00ffff;
+    }
+
+    #contact p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    #contact a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid #00ffff;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    #contact a:hover {
+      background: #00ffff;
+      color: #111;
+    }
+
+    /* ====== Footer ====== */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Shahul Pandikkad</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ====== About ====== -->
+  <section id="about">
+    <h1>Hey, I'm Shahul</h1>
+    <p>I'm a professional web and graphic designer with 3 years of experience creating modern, responsive websites and visually striking graphics. I specialize in UI/UX design, WordPress/Shopify websites, logos, social media graphics, and branding materials.</p>
+  </section>
+
+  <!-- ====== Portfolio ====== -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project 1</h3>
+        <p>Responsive UI/UX Design for a startup website.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Branding and Logo Design for a local business.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Custom WordPress/Shopify e-commerce development.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Gallery ====== -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="IMG_20250510_114714.jpg" alt="Project Photo 1"></div>
+    
+      <div class="gallery-item"><img src="IMG_20250712_150716.jpg" alt="Project Photo 3"></div>
+      
+  </section>
+
+  <!-- ====== Contact ====== -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:shahul@example.com">shahulpandikkad855@gmail.com</a></p>
+    <p>Phone: +91 7510980851</p>
+    <a href="https://wizorastudio.github.io/">Let's Work Together</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Shahul Pandikkad. All rights reserved.
+  </footer>
+
+  <script>
+    // Scroll animation
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
